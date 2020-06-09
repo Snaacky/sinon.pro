@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Sinon.pro | Temporary File Hosting</title>
+</head>
+
+<body class="text-center">
+    <div class="background">
+    </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Sinon.pro</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link" href="https://github.com/Snaacky/Sinon.pro">GitHub</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" id="home" class="inner cover">
+            <!-- Successful alert dialogue -->
+            <div class="alert alert-primary fade show" role="alert" id="successful-upload" hidden>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Error occurred dialogue -->
+            <div class="alert alert-danger fade show" role="alert" id="failed-upload" hidden>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> An error occurred while processing your upload. Please try again.
+            </div>
+
+            <!-- Main uploader UI -->
+            <h1 class="cover-heading">Upload your files.</h1>
+            <p class="lead">You can upload up to 100 MB per file.<br> Your files are securely purged after 24 hours.</p>
+            <p class="lead">
+            <form method="POST" action="/upload" enctype="multipart/form-data" id="uploader">
+                <label class="btn btn-lg btn-secondary">
+                    Click me to upload your file
+                    <input type="file" name="file" id="file" onChange="$(this).closest('form').submit()" hidden>
+                </label>
+            </form>
+            </p>
+        </main>
+    </div>
+
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/uploader.js"></script>
+</body>
+
+</html>
