@@ -1,6 +1,6 @@
 # Python package requirements:
 APScheduler==3.6.3
-Flask==1.1.1
+Flask==2.3.2
 
 # OS requirements:
 # srm (if using secure removals)
